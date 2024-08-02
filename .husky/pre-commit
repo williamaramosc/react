@@ -1,5 +1,4 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
 
 # Genera o actualiza el changelog
 npx conventional-changelog -i CHANGELOG.md -s -r 0
