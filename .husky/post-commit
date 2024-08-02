@@ -1,7 +1,8 @@
-#!/bin/sh
-
 # Genera o actualiza el changelog
 npx conventional-changelog -i CHANGELOG.md -s -r 0
 
 # Añade el changelog actualizado al commit
 git add CHANGELOG.md
+
+# Modifica el commit actual para incluir los cambios
+git commit --amend --no-edit
