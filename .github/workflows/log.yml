@@ -1,0 +1,17 @@
+name: Generar Changelog en PR a Integration
+
+on:
+  pull_request:
+    branches: [ integration ]
+
+jobs:
+  generate_changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: conventional-changelog-cli/action@v1
+        with:
+          cache: true
+          preset: angular
+          infile: CHANGELOG.md
+          output: CHANGELOG.md
