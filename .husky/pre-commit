@@ -1,4 +1,7 @@
+#!/bin/sh
+
 # Genera o actualiza el changelog
-conventional-changelog -i CHANGELOG.md -s -r 0
+npx conventional-changelog -i CHANGELOG.md -s -r 0
+
 # Añade el changelog actualizado al commit
 git add CHANGELOG.md
